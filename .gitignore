@@ -1,0 +1,40 @@
+# Build directories
+build/
+output/
+_deps/
+
+# Compiled objects and binaries
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+
+# GoogleTest vendored trees (should be fetched via FetchContent instead)
+googletest/
+googlemock/
+
+# Coverage
+*.gcov
+*.gcda
+*.gcno
+coverage/
+coverage.html
+coverage_summary/
+
+# IDE / OS
+.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# CMake generated
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Editor swaps
+*~
+*.swp

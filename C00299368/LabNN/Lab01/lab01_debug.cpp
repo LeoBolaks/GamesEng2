@@ -1,8 +1,8 @@
 // Lab 01 - Debugging fundamentals
 // Created on: 02 SEP 2026 - OA
 //
-// Student Name  :
-// Student ID:
+// Student Name  : Leo Bolaks
+// Student ID: C00299368
 //
 // Four intentional bugs are marked with //<BUG_x>. Fix them one at a time.
 // Leave the marker in place; annotate with the fix, e.g.

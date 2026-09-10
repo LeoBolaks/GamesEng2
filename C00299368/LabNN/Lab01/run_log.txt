@@ -1,0 +1,5 @@
+PS C:\msys64\ucrt64\bin> & "C:\Users\gameuser\Desktop\Games Engineering\GamesENGIIassignments\C00299368\LabNN\Lab01\lab01_debug.exe"
+Addition       (10 + 5) = 15
+Subtraction    (10 - 5) = 5
+Multiplication (10 * 5) = 50
+Division       (10 / 5) = 2

@@ -32,7 +32,7 @@ public:
     }
 
     double divide(int a, int b) {
-        return a / b;   //<BUG_4>
+        return (double)a / (double)b;   //<BUG_4 fixed: function now returns a double, as returning divided int values would truncate everything after the .>
     }
 };
 

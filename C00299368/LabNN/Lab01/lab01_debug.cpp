@@ -28,7 +28,7 @@ public:
 class Arithmetic2 {
 public:
     int multiply(int a, int b) {
-        return a / b;   //<BUG_3>
+        return a * b;   //<BUG_3 fixed: swapped "/" for "*">
     }
 
     double divide(int a, int b) {

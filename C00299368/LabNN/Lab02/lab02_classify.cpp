@@ -45,5 +45,20 @@ static void runTests() {
 int main() {
     runTests();
     std::cout << "\nSummary: " << passes << " passed, " << fails << " failed.\n";
+    int numberInput;
+    int returnValue;
+    std::cout << "\nPlease Enter A Testing Number\n";
+    if (std::cin >> numberInput)
+    {
+        returnValue = classify(numberInput);
+        std::cout << "Return Value is " << returnValue << "\n";
+    }
+    else
+    {
+        std::cin.clear();
+        while (std::cin.get() != '\n');
+        std::cout << "\nNot A Number Input\n";
+        return 0;
+    }
     return fails == 0 ? 0 : 1;
 }

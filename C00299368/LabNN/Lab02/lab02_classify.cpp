@@ -36,7 +36,9 @@ static void runTests() {
     // TODO(1): call classify() with a negative value and check the return equals -1
     checkEqual(classify(-5), -1, "Check Negative");
     // TODO(2): call classify() with zero and check the return equals 0
+    checkEqual(classify(0), 0, "Check Zero");
     // TODO(3): call classify() with a positive value and check the return equals 1
+    checkEqual(classify(5), 1, "Check Positive");
     // For instance : checkEqual(classify(X), X, "negative branch");
 }
 

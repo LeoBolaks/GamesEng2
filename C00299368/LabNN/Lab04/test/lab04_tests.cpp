@@ -50,3 +50,29 @@ TEST(ScanRegion, PrimePath_Example) {
     // This test covers nodes 1-6 and then 7 and the missing 9 and 12 nodes missing from the first top test
 }
 
+
+TEST(ScanRegion, If_Numbers_Less_Than_0_Non_Divisble_By_3) {
+    Grid g = {{1, 4, 3}};
+    EXPECT_EQ(scanRegion(g), -8);
+}
+TEST(ScanRegion, If_Numbers_Less_Than_0_Divisble_By_3) {
+    Grid g = {{1, 4, 4}};
+    EXPECT_EQ(scanRegion(g), 0);
+}
+TEST(ScanRegion, If_Numbers_Greater_Than_100_Non_Divisble_By_3) {
+    Grid g = {{103, 4, 23}, {54, 65, 34}};
+    EXPECT_EQ(scanRegion(g), 283);
+}
+TEST(ScanRegion, If_Numbers_Greater_Than_100_Divisble_By_3) {
+    Grid g = {{103, 4, 10}, {54, 65, 34}};
+    EXPECT_EQ(scanRegion(g), 100);
+}
+TEST(scanRegion, Test_Above_100) {
+    int num = 105;
+    EXPECT_EQ(adjust(num), 100);
+}
+TEST(scanRegion, Test_Big_Negative_Number) {
+    int num = -987678;
+    EXPECT_EQ(adjust(num), 0);
+}
+

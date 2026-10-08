@@ -1,6 +1,6 @@
 // Lab 05 - Testing a Three State Machine
-// Name  :
-// StudentID:
+// Name  : Leo Bolaks
+// StudentID: C00299368
 
 #include <gtest/gtest.h>
 #include "machine.hpp"
@@ -11,7 +11,14 @@ TEST(Machine, VisitsAllThreeStates) {
     Machine m;
     EXPECT_EQ(m.current(), State::OFF);
     // TODO: drive the machine to ON, then to PAUSED, checking with EXPECT_EQ after each step.
-    FAIL() << "not implemented";
+    m.step(Event::powerOn);
+    EXPECT_EQ(m.current(), State::ON);
+
+    m.step(Event::pause);
+    EXPECT_EQ(m.current(), State::PAUSED);
+
+    m.step(Event::resume);
+    EXPECT_EQ(m.current(), State::ON);
 }
 
 // -------- Transition coverage: one test per transition --------
@@ -21,21 +28,21 @@ TEST(Machine, OffPowerOnGoesToOn) {
 }
 
 TEST(Machine, OnPowerOffGoesToOff) {
-    // TODO
-    FAIL() << "not implemented";
+    Machine m;
+    EXPECT_EQ(m.transition(State::ON, Event::powerOff), State::OFF);
 }
 
 TEST(Machine, OnPauseGoesToPaused) {
-    // TODO
-    FAIL() << "not implemented";
+    Machine m;
+    EXPECT_EQ(m.transition(State::ON, Event::pause), State::PAUSED);
 }
 
 TEST(Machine, PausedResumeGoesToOn) {
-    // TODO
-    FAIL() << "not implemented";
+    Machine m;
+    EXPECT_EQ(m.transition(State::PAUSED, Event::resume), State::ON);
 }
 
 TEST(Machine, PausedPowerOffGoesToOff) {
-    // TODO
-    FAIL() << "not implemented";
+    Machine m;
+    EXPECT_EQ(m.transition(State::PAUSED, Event::powerOff), State::OFF);
 }

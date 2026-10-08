@@ -76,3 +76,6 @@ TEST(scanRegion, Test_Big_Negative_Number) {
     EXPECT_EQ(adjust(num), 0);
 }
 
+// P11 and P12 are infeasible because it skips the main loop and the sum is somehow greater than 10 without going through the loop
+// P14 is infeasible because if score is 0, 0 mod 3 is 0 so it cannot go into node 12 and only can go into node 11
+
